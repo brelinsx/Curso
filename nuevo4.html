@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Tienda Tecnológica</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos para pantallas de hasta 600px de ancho */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+      
+      header {
+        text-align: center;
+      }
+      
+      #banner {
+        text-align: center;
+        padding: 20px;
+      }
+      
+      #featured-products {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .product-card {
+        text-align: center;
+      }
+      
+      footer {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container iframe {
+      margin: 10px;
+    }
+  </style>
+  <script src="script.js" defer></script>
+  <script>
+    window.onload = function() {
+      var iframe = document.querySelector('iframe');
+      iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Tu Tienda Tecnológica</h1>
+    <nav>
+      <nav class="navbar" role="navigation"></nav>
+      <ul id="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contactos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="banner">
+      <h2>Bienvenido/a a Tu Tienda Tecnológica</h2>
+      <p>Descubre lo último en tecnología y encuentra los mejores productos.</p>
+      <a href="#" class="btn">Explorar</a>
+    </section>
+
+    <section id="featured-products">
+      <h2>Productos Destacados</h2>
+      <div class="product-card">
+        <img src="imgenfiretv.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Ver detalles</a>
+      </div>
+      <div class="product-card">
+        <img src="imgensilla.jpg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Ver detalles</a>
+      </div>
+      <div class="product-card">
+        <img src="imgenswitch.jpg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Ver detalles</a>
+      </div>
+    </section>
+  <div class="container">
+      <iframe width="300" height="150" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</main>
+<footer>
+  <p>Tu Tienda Tecnológica &copy; 2023. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
+
